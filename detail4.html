@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Experience Design for Dashboard App</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 40pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#https://www.instagram.com/hambah_allah0909?igsh=OXQyZ3BwNmdwMXM3">contact</a></li>
+			<li><a href="https://id.shp.ee/ekfexsw?smtt=0.0.9">OnlineShop</a></li>
+			<li><a href="https://youtu.be/Nzi-IqtNtKk?si=ct6Ljpisp1z6rtgp" target="_blank">My video</a></li>
+			<li class="empty"></li>
+			<li><a href="https://www.tiktok.com/@mupida028?_t=ZS-8vpVy96bLCp&_r=1" target="_blank">TikTok</a></li>
+			<li><a href="https://github.com/Mupida" target="_blank">GitHub</a></li>
+			<li><a href="https://www.facebook.com/share/1LRsUJcRMK/" target ="_blank">Petshop</a></li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="img/lipserum1.jpg" class="full-width-image" alt="My Produk LipSerum">
+			<h1 class="project-title">My Produk LipSerum<br>for Female And Male</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> / My Produk Lipserum For Female and Male
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Produk Overview</h2>
+						<p>Lip Serum adalah produk perawatan bibir premium yang diformulasikan untuk melembapkan, menutrisi, dan memperbaiki kondisi bibir kering, pecah-pecah, atau gelap. Dirancang untuk pria dan wanita, lip serum ini hadir dengan kandungan alami dan teknologi perawatan modern.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Target Pengguna:</h2>
+						<ul>
+							<li>Pria dan wanita usia 15–40 tahun</li>
+							<li>Pengguna yang mengalami bibir kering karena cuaca atau kebiasaan buruk (seperti merokok)</li>
+							<li>Pecinta skincare dan beauty yang mencari perawatan bibir jangka panjang</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Manfaat Utama:</h2>
+						<ul>
+							<li>Menutrisi dan meregenerasi sel kulit bibir</li>
+							<li>Membuat bibir terasa lebih lembut dan sehat</li>
+							<li>Mengurangi garis halus dan warna bibir tidak merata</li>
+							<li>Cocok digunakan sebagai base sebelum pemakaian lipstik</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Key Outcomes</h2>
+						<p>Hasil utama dari Produk ini</p>
+						<ul>
+							<li>Peningkatan Brand Awareness Produk dikenal oleh target pasar melalui media sosial dan influencer.</li>
+							<li>Peningkatan Penjualan Penjualan meningkat 50% sampai 70% dalam 3 bulan pertama sejak peluncuran.</li>
+							<li>Feedback Positif Konsumen 80% pelanggan merasa bibir lebih lembut, tidak kering, dan terlihat lebih cerah.</li>
+							<li>Pengembangan Produk Lanjutan Berdasarkan permintaan pasar, mulai dikembangkan varian baru (misalnya lip serum berwarna atau rasa).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="img/lipserum1.jpg" alt="Dashboard App Main Interface">
+								</div>
+								<div class="slider-slide">
+									<img src="img/lipaerum2.jpg" alt="Dashboard App Analytics View">
+								</div>
+								<div class="slider-slide">
+									<img src="img/lipserum3.jpg" alt="Dashboard App Mobile View">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>mupida@gmail.com</h2>
+			<p>designed & developed by Mupida 2025</p>
+		</footer>
+	</body>
+	</html>
